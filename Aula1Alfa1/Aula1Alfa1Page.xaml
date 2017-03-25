@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:Aula1Alfa1" x:Class="Aula1Alfa1.Aula1Alfa1Page"
+Title = "Página inicial">
+<StackLayout BackgroundColor="Gray">
+		<Label x:Name="lbl" BackgroundColor="Lime" FontSize="14" TextColor="Red" Text="Welcome to Xamarin Forms!" VerticalOptions="Fill" HorizontalOptions="CenterAndExpand" />
+		<StackLayout Orientation="Horizontal">
+			<Button Text="navegar" HorizontalOptions="FillAndExpand" StyleClass="Success" Clicked="Handle_Clicked" />
+			<Button Text="popup" HorizontalOptions="FillAndExpand" StyleClass="Primary" Clicked="VaiPopUp" />
+		</StackLayout>
+	</StackLayout>
+</ContentPage>
