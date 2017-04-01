@@ -4,21 +4,26 @@ namespace Aula1Alfa1
 {
 	public partial class Aula1Alfa1Page : ContentPage
 	{
+		public string Email { get; set; }
+		public string Senha { get; set; }
+		public Command CmdNavegar { get; set; }
+
 		public Aula1Alfa1Page()
 		{
-			BackgroundColor = Color.Red;
-
-			if (Device.OS == TargetPlatform.iOS)
-			{
-				//Padding = new Thickness(0,20,0,0);
-			}
-
 			InitializeComponent();
 
+			// via x:Name
 			lbl.Text = "Carregado via código";
+
+			Email = "leandro@lanceloti.com.br";
+
+			CmdNavegar = new Command(Navegar);
+
+			//mvvm
+			BindingContext = this;
 		}
 
-		void Handle_Clicked(object sender, System.EventArgs e)
+		void Navegar()
 		{
 			//DisplayAlert("Clicou", "Você clicou no botão", "ok");
 			Navigation.PushAsync(new Pagina2());

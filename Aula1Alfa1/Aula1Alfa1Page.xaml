@@ -3,8 +3,12 @@
 Title = "Página inicial">
 <StackLayout BackgroundColor="Gray">
 		<Label x:Name="lbl" BackgroundColor="Lime" FontSize="14" TextColor="Red" Text="Welcome to Xamarin Forms!" VerticalOptions="Fill" HorizontalOptions="CenterAndExpand" />
+
+		<Entry Text="{Binding Email}" Keyboard="Email" Placeholder="digite seu e-mail"></Entry>
+		<Entry Keyboard="Numeric" IsPassword="true" />
+		
 		<StackLayout Orientation="Horizontal">
-			<Button Text="navegar" HorizontalOptions="FillAndExpand" StyleClass="Success" Clicked="Handle_Clicked" />
+			<Button Command="{Binding CmdNavegar}" Text="navegar" HorizontalOptions="FillAndExpand" StyleClass="Success" />
 			<Button Text="popup" HorizontalOptions="FillAndExpand" StyleClass="Primary" Clicked="VaiPopUp" />
 		</StackLayout>
 	</StackLayout>

@@ -9,7 +9,7 @@ namespace Aula1Alfa1
 			InitializeComponent();
 
 			//MainPage = new Aula1Alfa1Page();
-			MainPage = new NavigationPage(new Aula1Alfa1Page());
+			MainPage = new NavigationPage(new Anuncios());
 		}
 
 		protected override void OnStart()

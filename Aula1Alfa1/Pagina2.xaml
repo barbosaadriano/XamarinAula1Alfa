@@ -1,23 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Aula1Alfa1.Pagina2">
-	<Grid Padding="10" BackgroundColor="Silver">
+	<Grid Padding="10">
 	<Grid.RowDefinitions>
 			<RowDefinition Height="*"></RowDefinition>
 			<RowDefinition Height="auto"></RowDefinition>
 		</Grid.RowDefinitions>
 		
-	<ScrollView Grid.Row="0" Grid.ColumnSpan="2">
-				<Editor Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas et nibh fringilla, tristique lacus et, tempus tortor. Sed consequat ex in erat blandit vestibulum. Nam mollis magna a sodales volutpat. Curabitur semper mauris sem, sed volutpat odio hendrerit vitae. Proin laoreet, sapien pretium semper lacinia, nisl tortor commodo lorem, vel sollicitudin elit tortor eget velit. In ac erat lacus. Morbi placerat nisi at urna pellentesque condimentum.
-
-Suspendisse at tellus et diam fermentum varius. Quisque at tortor purus. Nulla tellus sapien, aliquam et interdum at, volutpat eu purus. Ut ultricies semper mattis. Proin condimentum, felis in tempor pharetra, orci nunc dignissim ligula, sed vestibulum lectus mauris in ante. Fusce porttitor dapibus sem, vitae dictum massa vulputate nec. Curabitur id tempor metus. Donec vitae vehicula orci. Proin varius lobortis scelerisque. Fusce tincidunt scelerisque interdum. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras a placerat mi. Ut nec nunc eu leo ultrices varius. Phasellus feugiat purus vitae purus interdum, quis tristique sem consequat. Nulla vestibulum tincidunt tellus, et porttitor tellus condimentum ac. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-
-Vestibulum consectetur maximus metus, placerat porttitor lorem porttitor eu. Vestibulum vehicula tincidunt tellus, ut egestas tellus finibus non. Aenean non eros nulla. Ut iaculis mattis metus, in vestibulum ante. Proin tempus elit pulvinar sem venenatis, at bibendum magna hendrerit. Donec porttitor sed ipsum ut aliquam. Sed vitae aliquet erat, ac facilisis nunc. Fusce maximus risus eu consequat mattis. Maecenas lorem lorem, volutpat nec faucibus at, accumsan eget est. Proin quis velit libero. Pellentesque bibendum ex a lectus mattis tincidunt. In dapibus mi id enim blandit elementum. Ut felis sapien, aliquam ac est nec, laoreet egestas sem. Vestibulum in efficitur leo. Sed mollis, mauris id varius interdum, nulla augue posuere tellus, eu lobortis lacus erat feugiat ante. Vestibulum purus orci, pulvinar quis purus at, consectetur accumsan urna.
-
-Nam at lacus eu diam aliquet lobortis. In mollis diam ut orci consequat lobortis. Nunc efficitur rhoncus ligula quis blandit. Vestibulum dignissim ipsum non dictum lobortis. Vestibulum a erat et nunc sagittis congue id eu tellus. Nulla lobortis interdum metus nec efficitur. Duis ac urna sit amet risus aliquam dapibus in id lacus. Cras blandit et nunc et mattis. Sed eu justo nec neque egestas molestie. Donec mollis, sapien vel placerat laoreet, ipsum ipsum molestie diam, id suscipit nisi leo ultrices neque. Phasellus ac mauris ac nisl tristique pharetra. Curabitur quis orci vitae purus tincidunt volutpat vel non nibh. In hac habitasse platea dictumst.
-
-Duis id velit commodo, accumsan est ac, lobortis metus. Cras augue est, suscipit quis dignissim eu, commodo ut eros. Donec vitae sagittis arcu. Praesent bibendum pretium odio et pharetra. Aenean sed dui eu ex mollis facilisis nec eget ex. Fusce lobortis turpis in neque euismod vulputate. Mauris sit amet tellus a neque tristique gravida ultricies a ipsum.">
-		</Editor>
-	</ScrollView>
+	<ListView Grid.Row="0" Grid.ColumnSpan="2" ItemsSource="{Binding Nomes}">
+			<ListView.ItemTemplate>
+				<DataTemplate>
+					<TextCell Text="{Binding Nome}" Detail="{Binding NomeCompleto}" />
+				</DataTemplate>
+			</ListView.ItemTemplate>
+	</ListView>
 		<Button StyleClass="Primary" Grid.Row="1" Grid.Column="0" Text="voltar" Clicked="Handle_Clicked" />
 		<Button StyleClass="Danger" Grid.Row="1" Grid.Column="1" Text="excluir"></Button>
 	</Grid>
