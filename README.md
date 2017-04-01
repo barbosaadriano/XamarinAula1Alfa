@@ -13,6 +13,7 @@ https://developer.xamarin.com/guides/xamarin-forms/creating-mobile-apps-xamarin-
 
 Icones
 iOS / Android: https://applypixels.com/
+
 Android: http://romannurik.github.io/AndroidAssetStudio/index.html
 
 Slides
