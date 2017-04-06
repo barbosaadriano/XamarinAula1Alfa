@@ -5,7 +5,7 @@ using Xamarin.Forms;
 
 namespace Aula1Alfa1
 {
-	public partial class Detalhes : ContentPage
+	public partial class Detalhes : CarouselPage
 	{
 		public Anuncio Anuncio { get; set; }
 		
@@ -13,7 +13,7 @@ namespace Aula1Alfa1
 		{
 			this.Anuncio = anuncio;
 			BindingContext = this;
-
+			ItemsSource = Anuncio.All;			
 			InitializeComponent();
 		}
 

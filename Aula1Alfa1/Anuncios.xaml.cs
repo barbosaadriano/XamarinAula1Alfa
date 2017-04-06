@@ -55,5 +55,17 @@ namespace Aula1Alfa1
 			// quem sabe?
 			((ListView)sender).SelectedItem = null;
 		}
+		public async Task <List<Anuncio>> All()
+		{
+		  
+		  RestUrl = "https://classidiario.odiario.com/api/anuncio/1183935"
+		  var uri = new Uri (string.Format (Constants.RestUrl, string.Empty));
+		  var response = await client.GetAsync (uri);
+		  if (response.IsSuccessStatusCode) {
+			  var content = await response.Content.ReadAsStringAsync ();
+			  Items = JsonConvert.DeserializeObject <List<Anuncio>> (content);
+			  return items;
+		  }
+		}
 	}
 }

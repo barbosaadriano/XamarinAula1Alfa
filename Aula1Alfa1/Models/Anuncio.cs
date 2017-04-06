@@ -9,5 +9,6 @@ namespace Aula1Alfa1
 		public string Valor { get; set; }
 
 		public string Src => "https://classidiario.odiario.com/content/media/imagem/" + Imagem;
+		
 	}
 }
